@@ -137,7 +137,7 @@ void lcd_puts (char *s)//chuong trinh goi chuoi ky tu
 void lcd_dis_num(int data){//ABCD
 	if(data>99) lcd_putchar(data/100+48);
 	else lcd_puts(" ");
-	if(data>9) lcd_putchar(data/10+48);
+	if(data>9) lcd_putchar((data%100)/10+48);
 	else lcd_puts(" ");
 	lcd_putchar(data%10+48);
 }

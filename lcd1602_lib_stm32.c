@@ -48,6 +48,15 @@ LCD: 1602
 #define led_lcd_0 	HAL_GPIO_WritePin(LCD_LED_PORT,LCD_LED,GPIO_PIN_RESET)
 
 ///////////////LCD 1602///////////////////////////////////////////////////////////
+void lcd_enable();
+void lcd_sen4bit(unsigned char data);
+void lcd_sendcommand(unsigned char command);
+void lcd_init();
+void lcd_gotoxy(char x, char y);
+void lcd_clear();
+void lcd_putchar(unsigned char data);
+void lcd_dis_num(int data);
+
 char lcd_d4,lcd_d5,lcd_d6,lcd_d7;//cac chan du lieu cua lcd
 void lcd_enable(){
   lcd_e1;//E=1
